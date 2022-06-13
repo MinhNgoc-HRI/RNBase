@@ -16,6 +16,7 @@ const HomeScreen = ({ navigation, route }: HomeScreenProps) => {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen name={'Cat'} component={Cat} />
+      <HomeStack.Screen name={'Profile'} component={Cat} />
     </HomeStack.Navigator>
   );
 };

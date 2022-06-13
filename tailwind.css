@@ -1,0 +1,59 @@
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.flex {
+  display: flex
+}
+
+.hidden {
+  display: none
+}
+
+.h-200 {
+  height: 200px
+}
+
+.h-40 {
+  height: 40px
+}
+
+.w-200 {
+  width: 200px
+}
+
+.w-40 {
+  width: 40px
+}
+
+.flex-1 {
+  flex: 1 1 0%
+}
+
+.bg-backdrop {
+  background-color: rgba(0,0,0,0.5)
+}
+
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity))
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 255 / var(--tw-bg-opacity))
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}

@@ -11,25 +11,39 @@ const Details = ({ navigation, route }: Props) => {
       <Text>Detail</Text>
       <Button
         onPress={() => {
-          navigation.reset({
-            index: 0,
-            routes: [
-              {
-                name: 'Home',
-                state: {
-                  index: 0,
-                  routes: [
-                    {
-                      name: 'Cat',
-                      params: {
-                        sort: true,
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
+          navigation.navigate('Home', {
+            screen: 'Cat',
+            params: {
+              sort: [],
+            },
           });
+          // navigation.reset({
+          //   index: 0,
+          //   routes: [
+          //     {
+          //       name: 'Home',
+          //       state: {
+          {
+            /*        index: 0,*/
+          }
+          {
+            /*        routes: [*/
+          }
+          {
+            /*          {*/
+          }
+          {
+            /*            name: 'Cat',*/
+          }
+          //             params: {
+          //               sort: true,
+          //             },
+          //           },
+          //         ],
+          //       },
+          //     },
+          //   ],
+          // });
         }}
       />
     </View>
