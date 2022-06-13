@@ -6,92 +6,76 @@ import {
   LayoutChangeEvent,
   Text,
 } from 'react-native';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTailwind } from 'tailwind-rn/dist';
-import Animated, { measure, useSharedValue } from 'react-native-reanimated';
-export type Position = {
-  top: number;
-  left: number;
-};
-const WraperComponent = ({
-  children,
-  visible = false,
-}: {
-  children: React.ReactElement;
-  visible?: boolean;
-}) => {
-  const tw = useTailwind();
-  const refView = useRef<View>(null);
-  const position = useSharedValue<Position>({
-    top: 0,
-    left: 0,
-  });
-  const { top, left } = position.value;
-  return (
-    <React.Fragment>
-      <View
-        ref={refView}
-        onLayout={(event: LayoutChangeEvent) => {
-          console.log('on layout');
-          console.log({ event });
-          refView &&
-            refView.current &&
-            refView.current.measure(
-              (x, y, h, w, px, py) => (position.value = { top: py, left: px }),
-            );
-        }}>
-        {children}
-      </View>
-      <Modal visible={visible} transparent={true} animationType={'fade'}>
-        <View style={tw('flex-1 bg-backdrop')}>
-          {/* <View style={tw('flex-1 absolute bg-red')} /> */}
-          <Animated.View style={[tw('absolute'), { top, left }]}>
-            {React.cloneElement(children)}
-            {/* {children} */}
-          </Animated.View>
-          <Text>Skip</Text>
-        </View>
-      </Modal>
-    </React.Fragment>
-  );
-};
-
+// import Animated, { measure, useSharedValue } from 'react-native-reanimated';
+import TooltipProvider, {
+  Tooltip,
+} from '@src/components/Tooltip/components/TooltipProvider';
+import TooltipStep from '@src/components/Tooltip/components/TooltipStep';
+import { useEvent } from '@src/components/Tooltip/hook';
 const Welcome = () => {
   const tw = useTailwind();
-  const [visible, setVisible] = useState(false);
-  const [visible1, setVisible1] = useState(false);
+  const { addEventListener, removeEventListener } = useEvent();
+
+  useEffect(() => {
+    // Listener AppTour Event
+    const id = addEventListener('TooltipEvent', event => {
+      console.log({ node: event.node });
+      console.log('TooltipEvent', event.name, event.node?.id);
+    });
+
+    return () => {
+      removeEventListener(id);
+    };
+  }, []);
+
+  const onStartAppTour = () => {
+    // Start show AppTour
+    // Use AppTour.start(step) to jump to step
+    Tooltip.start();
+  };
+
   return (
-    <View style={tw('flex-1')}>
-      <View style={tw('w-200 h-200 bg-red')} />
-      <View style={tw('w-200 h-200 bg-blue')}>
-        <WraperComponent visible={visible}>
-          <React.Fragment>
+    <TooltipProvider
+      sceneIndex={0}
+      scenes={[
+        [{ id: '1' }, { id: '2' }],
+        [{ id: '2' }, { id: '1' }],
+      ]}>
+      <View style={tw('flex-1')}>
+        <View style={tw('w-200 h-200 bg-red')} />
+        <View style={tw('w-200 h-200 bg-blue')}>
+          <TooltipStep
+            id="1"
+            title="Text welcome"
+            describe="This is welcome title app">
+            {/* <React.Fragment> */}
             <View
               style={[
                 tw('w-40 h-40 bg-white'),
                 { position: 'absolute', top: 50, left: 50 },
               ]}
             />
-            <Button
-              title="Button"
-              onPress={() => {
-                setVisible1(true);
-                setVisible(false);
-              }}
-            />
-          </React.Fragment>
-        </WraperComponent>
-        <WraperComponent visible={visible1}>
-          <View style={[tw('w-40 h-40 bg-red')]} />
-        </WraperComponent>
-        <Button
-          title="Button"
-          onPress={() => {
-            setVisible(true);
-          }}
-        />
+
+            {/* </React.Fragment> */}
+          </TooltipStep>
+          <Button
+            title="Button"
+            onPress={() => {
+              onStartAppTour();
+            }}
+          />
+          <TooltipStep
+            id="2"
+            title="Text welcome 2"
+            describe="This is welcome title app">
+            <View style={[tw('w-40 h-40 bg-red')]} />
+          </TooltipStep>
+          <Button title="Button" onPress={() => {}} />
+        </View>
       </View>
-    </View>
+    </TooltipProvider>
   );
 };
 

@@ -13,6 +13,7 @@ import {
   Modal,
   BackHandler,
   NativeEventSubscription,
+  View,
 } from 'react-native';
 import { useSharedValue, withTiming, runOnJS } from 'react-native-reanimated';
 import { TooltipContext } from '@src/components/Tooltip/components/TooltipContext';
@@ -113,6 +114,7 @@ function TooltipView(_: TooltipViewProps, ref: React.Ref<any>) {
       onStop(cb);
     },
     start: (step: number) => {
+      console.log('vao start');
       open(step);
     },
     currentStep: () => {

@@ -297,10 +297,10 @@ function MashView(props: MashViewProps) {
         <Defs>
           <Mask id="mask" x="0" y="0" height="100%" width="100%">
             <Rect height="100%" width="100%" fill="#fff" />
-            <CircleAnimated
+            {/* <CircleAnimated
               animatedProps={animatedPropsMaskCircle}
               fill="black"
-            />
+            /> */}
             <RectAnimated animatedProps={animatedPropsMaskRect} fill="black" />
           </Mask>
         </Defs>
