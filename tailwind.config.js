@@ -42,6 +42,7 @@ module.exports = {
         40: '40px',
         48: '48px',
         200: '200px',
+        280: '280px',
       },
       borderRadius: {
         48: '48px',
@@ -73,6 +74,9 @@ module.exports = {
         34: '34px',
         37: '37px',
         40: '40px',
+      },
+      minHeight: {
+        280: '280px',
       },
     },
   },

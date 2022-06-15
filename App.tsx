@@ -40,7 +40,7 @@ export default function () {
   return (
     <TailwindProvider utilities={utilities}>
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName={'Home'}>
+        <Stack.Navigator initialRouteName={'Onboarding'}>
           <Stack.Screen
             name={'Onboarding'}
             component={Onboarding}
