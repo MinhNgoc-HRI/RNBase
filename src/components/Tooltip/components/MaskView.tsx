@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { useContext } from 'react';
 import {
   View,
@@ -6,6 +7,7 @@ import {
   LayoutChangeEvent,
   Platform,
   TouchableOpacity,
+  Text,
 } from 'react-native';
 import equals from 'react-fast-compare';
 import { Svg, Defs, Rect, Circle, Mask } from 'react-native-svg';
@@ -54,7 +56,6 @@ function MashView(props: MashViewProps) {
   const TriangleHeight = options?.triangleHeight ?? 8;
   const StepHeight = options?.stepHeight ?? 20;
   const pathAnimated = options?.pathAnimated ?? IS_IOS;
-
   const onNextStep = () => {
     const nextValue = currentStep.value + 1;
     const sceneLength = scene.length;
@@ -293,16 +294,19 @@ function MashView(props: MashViewProps) {
 
   return (
     <View pointerEvents="box-none" style={styles.container}>
+      <View style={{ position: 'absolute' }}>
+        <Text>aaaa</Text>
+      </View>
       <Svg height="100%" width="100%">
         <Defs>
           <Mask id="mask" x="0" y="0" height="100%" width="100%">
             <Rect height="100%" width="100%" fill="#fff" />
-            {/* <CircleAnimated
-              animatedProps={animatedPropsMaskCircle}
-              fill="black"
-            /> */}
             <RectAnimated animatedProps={animatedPropsMaskRect} fill="black" />
           </Mask>
+          <CircleAnimated
+            animatedProps={animatedPropsMaskCircle}
+            fill="black"
+          />
         </Defs>
         <RectAnimated
           animatedProps={animatedPropsBackdrop}
@@ -348,7 +352,7 @@ function MashView(props: MashViewProps) {
         </View>
         <MenuButton currentStep={currentStep} onStop={onStop} />
       </Animated.View>
-      {options?.stepShow !== false && (
+      {/* {options?.stepShow !== false && (
         <Animated.View
           style={[
             styles.stepView,
@@ -368,7 +372,7 @@ function MashView(props: MashViewProps) {
             animatedProps={animatedPropsStep}
           />
         </Animated.View>
-      )}
+      )} */}
       <TapGestureHandler
         onGestureEvent={onGestureEventNode}
         enabled={!options?.nativeModal}>

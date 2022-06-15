@@ -1,6 +1,5 @@
 import React from 'react';
-import { Alert, StyleSheet, Text, View } from 'react-native';
-import Button from '@src/components/Button';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { type CompositeScreenProps } from '@react-navigation/native';
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
 import { HomeStackParamlist, RootStackParamList } from '../../../App';
@@ -15,8 +14,9 @@ const CatScreen = ({ navigation, route }: CatScreenProps) => {
       <Text>AAAAA</Text>
       <Button
         onPress={() => {
-          navigation.navigate('Detail');
+          // navigation.navigate('Detail');
         }}
+        title={'Click me'}
       />
     </View>
   );
@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'black',
   },
 });

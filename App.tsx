@@ -10,17 +10,21 @@ import {
 } from '@react-navigation/native-stack';
 
 import { useFlipper } from '@react-navigation/devtools';
-import Welcome from '@src/screens/Welcome/Welcome';
+import Home from '@src/screens/Home';
 // setup Tailwind
 import { TailwindProvider } from 'tailwind-rn';
 import utilities from './tailwind.json';
+import Onboarding from '@src/screens/Onboarding/Onboarding';
 // setup Tailwind
 export type HomeStackParamlist = {
   Cat: { sort: [] } | undefined;
   Profile: { name: string } | undefined;
+  Shop: { sort: [] } | undefined;
+  Item: { name: string } | undefined;
+  Card: undefined;
 };
 export type RootStackParamList = {
-  Welcome: undefined;
+  Onboarding: undefined;
   Home: NavigatorScreenParams<HomeStackParamlist>;
   Detail: undefined;
 };
@@ -36,12 +40,13 @@ export default function () {
   return (
     <TailwindProvider utilities={utilities}>
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName={'Home'}>
           <Stack.Screen
-            name={'Welcome'}
-            component={Welcome}
+            name={'Onboarding'}
+            component={Onboarding}
             options={NoHeader}
           />
+          <Stack.Screen name={'Home'} component={Home} options={NoHeader} />
         </Stack.Navigator>
       </NavigationContainer>
     </TailwindProvider>

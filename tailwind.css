@@ -2,8 +2,24 @@
   position: absolute
 }
 
-.relative {
-  position: relative
+.bottom-0 {
+  bottom: 0px
+}
+
+.right-0 {
+  right: 0px
+}
+
+.left-0 {
+  left: 0px
+}
+
+.mt-17 {
+  margin-top: 17px
+}
+
+.mb-40 {
+  margin-bottom: 40px
 }
 
 .flex {
@@ -14,46 +30,66 @@
   display: none
 }
 
-.h-200 {
-  height: 200px
-}
-
-.h-40 {
-  height: 40px
-}
-
-.w-200 {
-  width: 200px
-}
-
-.w-40 {
-  width: 40px
-}
-
 .flex-1 {
   flex: 1 1 0%
 }
 
-.bg-backdrop {
-  background-color: rgba(0,0,0,0.5)
+.flex-row {
+  flex-direction: row
 }
 
-.bg-red {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity))
+.flex-col {
+  flex-direction: column
 }
 
-.bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 255 / var(--tw-bg-opacity))
+.items-center {
+  align-items: center
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+.rounded-t-48 {
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px
 }
 
-.bg-white {
+.bg-\#5669FF {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+  background-color: rgb(86 105 255 / var(--tw-bg-opacity))
+}
+
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px
+}
+
+.pt-40 {
+  padding-top: 40px
+}
+
+.pb-37 {
+  padding-bottom: 37px
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-22 {
+  font-size: 22px
+}
+
+.text-15 {
+  font-size: 15px
+}
+
+.font-medium {
+  font-weight: 500
+}
+
+.font-normal {
+  font-weight: 400
+}
+
+.text-\#FFFFFF {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
 }

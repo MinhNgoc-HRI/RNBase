@@ -4,9 +4,29 @@
 			"position": "absolute"
 		}
 	},
-	"relative": {
+	"bottom-0": {
 		"style": {
-			"position": "relative"
+			"bottom": 0
+		}
+	},
+	"right-0": {
+		"style": {
+			"right": 0
+		}
+	},
+	"left-0": {
+		"style": {
+			"left": 0
+		}
+	},
+	"mt-17": {
+		"style": {
+			"marginTop": 17
+		}
+	},
+	"mb-40": {
+		"style": {
+			"marginBottom": 40
 		}
 	},
 	"flex": {
@@ -19,26 +39,6 @@
 			"display": "none"
 		}
 	},
-	"h-200": {
-		"style": {
-			"height": 200
-		}
-	},
-	"h-40": {
-		"style": {
-			"height": 40
-		}
-	},
-	"w-200": {
-		"style": {
-			"width": 200
-		}
-	},
-	"w-40": {
-		"style": {
-			"width": 40
-		}
-	},
 	"flex-1": {
 		"style": {
 			"flexGrow": 1,
@@ -46,33 +46,78 @@
 			"flexBasis": "0%"
 		}
 	},
-	"bg-backdrop": {
+	"flex-row": {
 		"style": {
-			"backgroundColor": "rgba(0,0,0,0.5)"
+			"flexDirection": "row"
 		}
 	},
-	"bg-red": {
+	"flex-col": {
 		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(255 0 0 / var(--tw-bg-opacity))"
+			"flexDirection": "column"
 		}
 	},
-	"bg-blue": {
+	"items-center": {
 		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(0 0 255 / var(--tw-bg-opacity))"
+			"alignItems": "center"
 		}
 	},
-	"bg-black": {
+	"rounded-t-48": {
 		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(0 0 0 / var(--tw-bg-opacity))"
+			"borderTopLeftRadius": 48,
+			"borderTopRightRadius": 48
 		}
 	},
-	"bg-white": {
+	"bg-#5669FF": {
 		"style": {
 			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
+			"backgroundColor": "rgb(86 105 255 / var(--tw-bg-opacity))"
+		}
+	},
+	"px-40": {
+		"style": {
+			"paddingLeft": 40,
+			"paddingRight": 40
+		}
+	},
+	"pt-40": {
+		"style": {
+			"paddingTop": 40
+		}
+	},
+	"pb-37": {
+		"style": {
+			"paddingBottom": 37
+		}
+	},
+	"text-center": {
+		"style": {
+			"textAlign": "center"
+		}
+	},
+	"text-22": {
+		"style": {
+			"fontSize": 22
+		}
+	},
+	"text-15": {
+		"style": {
+			"fontSize": 15
+		}
+	},
+	"font-medium": {
+		"style": {
+			"fontWeight": "500"
+		}
+	},
+	"font-normal": {
+		"style": {
+			"fontWeight": "400"
+		}
+	},
+	"text-#FFFFFF": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(255 255 255 / var(--tw-text-opacity))"
 		}
 	}
 }
