@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { type CompositeScreenProps } from '@react-navigation/native';
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
-import { HomeStackParamlist, RootStackParamList } from '../../../App';
+import { HomeStackParamlist, RootStackParamList } from '../../App';
 
 type CatScreenProps = CompositeScreenProps<
   NativeStackScreenProps<RootStackParamList, 'Home'>,

@@ -2,7 +2,7 @@ import React from 'react';
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { HomeStackParamlist, RootStackParamList } from '../../App';
+import { HomeStackParamlist, RootStackParamList } from '../App';
 import Cat from '@src/screens/Home/Cat';
 import Tabbar from './Home/BottomTab';
 

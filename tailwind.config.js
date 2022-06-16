@@ -8,7 +8,8 @@ module.exports = {
         '#FAFAFA': '#FAFAFA',
         '#5669FF': '#5669FF',
         '#FFFFFF': '#FFFFFF',
-        red: 'red',
+        '#FFFFFF80': '#FFFFFF80',
+        '#3D56F0': '#3D56F0',
         blue: 'blue',
         black: 'black',
         backdrop: 'rgba(0,0,0,0.5)',
@@ -45,6 +46,8 @@ module.exports = {
         280: '280px',
       },
       borderRadius: {
+        12: '12px',
+        15: '15px',
         48: '48px',
       },
       fontSize: {
@@ -77,6 +80,13 @@ module.exports = {
       },
       minHeight: {
         280: '280px',
+      },
+      minWidth: {
+        200: '200px',
+        280: '280px',
+      },
+      translate: {
+       
       },
     },
   },

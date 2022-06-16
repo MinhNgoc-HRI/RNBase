@@ -13,8 +13,9 @@ import { useFlipper } from '@react-navigation/devtools';
 import Home from '@src/screens/Home';
 // setup Tailwind
 import { TailwindProvider } from 'tailwind-rn';
-import utilities from './tailwind.json';
+import utilities from '../tailwind.json';
 import Onboarding from '@src/screens/Onboarding/Onboarding';
+import AuthScreen from '@src/screens/Authentication/AuthScreen';
 // setup Tailwind
 export type HomeStackParamlist = {
   Cat: { sort: [] } | undefined;
@@ -25,6 +26,7 @@ export type HomeStackParamlist = {
 };
 export type RootStackParamList = {
   Onboarding: undefined;
+  AuthScreen: undefined;
   Home: NavigatorScreenParams<HomeStackParamlist>;
   Detail: undefined;
 };
@@ -40,10 +42,15 @@ export default function () {
   return (
     <TailwindProvider utilities={utilities}>
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName={'Onboarding'}>
+        <Stack.Navigator initialRouteName={'AuthScreen'}>
           <Stack.Screen
             name={'Onboarding'}
             component={Onboarding}
+            options={NoHeader}
+          />
+          <Stack.Screen
+            name={'AuthScreen'}
+            component={AuthScreen}
             options={NoHeader}
           />
           <Stack.Screen name={'Home'} component={Home} options={NoHeader} />
