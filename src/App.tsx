@@ -24,9 +24,15 @@ export type HomeStackParamlist = {
   Item: { name: string } | undefined;
   Card: undefined;
 };
+export type AuthStackParamList = {
+  SigninScreen: undefined;
+  SignupScreen: undefined;
+  VerificationScreen: undefined;
+  RessetpasswordScreen: undefined;
+};
 export type RootStackParamList = {
   Onboarding: undefined;
-  AuthScreen: undefined;
+  AuthScreen: NavigatorScreenParams<AuthStackParamList>;
   Home: NavigatorScreenParams<HomeStackParamlist>;
   Detail: undefined;
 };
@@ -35,7 +41,7 @@ export const NoHeader: NativeStackNavigationOptions = {
   header: (): React.ReactNode => null,
 };
 export default function () {
-  const navigationRef = useNavigationContainerRef();
+  const navigationRef = useNavigationContainerRef<RootStackParamList>();
 
   useFlipper(navigationRef);
 

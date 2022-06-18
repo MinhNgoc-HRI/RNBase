@@ -9,84 +9,43 @@ module.exports = {
         '#5669FF': '#5669FF',
         '#FFFFFF': '#FFFFFF',
         '#FFFFFF80': '#FFFFFF80',
+        '#9D9898': '#9D9898',
         '#3D56F0': '#3D56F0',
-        blue: 'blue',
-        black: 'black',
+        '#747688': '#747688',
+        '#120D26': '#120D26',
+        '##37364A': '#37364A',
         backdrop: 'rgba(0,0,0,0.5)',
       },
-      spacing: {
-        1: '1px',
-        2: '2px',
-        3: '3px',
-        4: '4px',
-        5: '5px',
-        6: '6px',
-        7: '7px',
-        8: '8px',
-        9: '9px',
-        10: '10px',
-        11: '11px',
-        12: '12px',
-        13: '13px',
-        14: '14px',
-        15: '15px',
-        16: '16px',
-        17: '17px',
-        18: '18px',
-        19: '19px',
-        20: '20px',
-        21: '21px',
-        22: '22px',
-        23: '23px',
-        34: '34px',
-        37: '37px',
-        40: '40px',
-        48: '48px',
-        200: '200px',
-        280: '280px',
-      },
-      borderRadius: {
-        12: '12px',
-        15: '15px',
-        48: '48px',
-      },
-      fontSize: {
-        1: '1px',
-        2: '2px',
-        3: '3px',
-        4: '4px',
-        5: '5px',
-        6: '6px',
-        7: '7px',
-        8: '8px',
-        9: '9px',
-        10: '10px',
-        11: '11px',
-        12: '12px',
-        13: '13px',
-        14: '14px',
-        15: '15px',
-        16: '16px',
-        17: '17px',
-        18: '18px',
-        19: '19px',
-        20: '20px',
-        21: '21px',
-        22: '22px',
-        23: '23px',
-        34: '34px',
-        37: '37px',
-        40: '40px',
-      },
-      minHeight: {
-        280: '280px',
-      },
-      minWidth: {
-        200: '200px',
-        280: '280px',
-      },
+      spacing: (() => {
+        return Array.from(Array(600).keys()).map((e, index) => {
+          return `${index + 1}px`;
+        });
+      })(),
+      borderRadius: (() => {
+        return Array.from(Array(9999).keys()).map((e, index) => {
+          return `${index + 1}px`;
+        });
+      })(),
+      fontSize: (() => {
+        return Array.from(Array(200).keys()).map((e, index) => {
+          return `${index + 1}px`;
+        });
+      })(),
+      minHeight: (() => {
+        return Array.from(Array(1000).keys()).map((e, index) => {
+          return `${index + 1}px`;
+        });
+      })(),
+      minWidth: (() => {
+        return Array.from(Array(1000).keys()).map((e, index) => {
+          return `${index + 1}px`;
+        });
+      })(),
       translate: {
-       
+        '4/7': '57.1428571%',
+      },
+      lineHeight: {
+        48: '48px',
       },
     },
   },

@@ -1,14 +1,7 @@
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Dimensions, Text, TouchableOpacity, View } from 'react-native';
+import React, { useCallback, useRef, useState } from 'react';
 import Animation, {
   useAnimatedScrollHandler,
-  useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
 import Card from './components/Card';
@@ -18,6 +11,8 @@ import OnboardingImgTwo from '@src/assets/svgs/Onboarding/img_onboarding1.svg';
 import OnboardingImgThree from '@src/assets/svgs/Onboarding/img_onboarding2.svg';
 import { useTailwind } from 'tailwind-rn/dist';
 import Animated from 'react-native-reanimated';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '@src/App';
 export type OnboardingType = {
   title: string;
   description: string;
@@ -49,7 +44,8 @@ const OnboardingData: OnboardingType[] = [
 ];
 const dataSize = OnboardingData.length;
 const { width: wD, height: hD } = Dimensions.get('window');
-const Onboarding = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'Onboarding'>;
+const Onboarding = ({}: Props) => {
   const tw = useTailwind();
   const translateX = useSharedValue<number>(0);
   const scrollHandler = useAnimatedScrollHandler((event, context) => {
@@ -69,7 +65,7 @@ const Onboarding = () => {
         onScrollEndDrag={onScrollEndDragHandle}
         scrollEventThrottle={10}
         horizontal
-        style={styles.container}
+        style={tw('flex-1 bg-#FFFFFF')}
         onScroll={scrollHandler}>
         {OnboardingData.map((item, index) => {
           return (
@@ -154,17 +150,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-});
-// translateX.value >= 390 &&
-//   scrollRef.current &&
-//   scrollRef.current.scrollTo({
-//     x: translateX.value - 390,
-//     y: 0,
-//   });
+export default React.memo(Onboarding);
