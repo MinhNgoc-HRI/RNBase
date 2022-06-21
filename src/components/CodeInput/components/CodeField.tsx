@@ -70,7 +70,7 @@ function CodeFieldComponent(
   );
 
   return (
-    <RootComponent {...RootProps} style={getStyle(styles.root, rootStyle)}>
+    <RootComponent {...RootProps} style={[getStyle(styles.root, rootStyle)]}>
       {cells}
       <InputComponent
         disableFullscreenUI

@@ -69,7 +69,7 @@ const InputCommon = ({
     <View
       style={[
         tw(
-          'w-full min-w-280 flex-row justify-between items-center bg-#FFFFFF py-18 px-15 rounded-15 my-8',
+          'w-full min-w-280 flex-row justify-between items-center bg-#FFFFFF py-18 px-15 rounded-15 my-8 border-1 border-#747688',
         ),
       ]}>
       <View style={tw('w-24 h-24 justify-center items-center')}>
@@ -102,9 +102,12 @@ const InputCommon = ({
       {title && (
         <Animated.View
           pointerEvents={'box-only'}
-          style={[tw('flex-row items-center absolute text-14'), rtitleStyle]}>
+          style={[
+            tw('flex-row items-center absolute text-14 bg-#FFFFFF px-2'),
+            rtitleStyle,
+          ]}>
           <Text
-            style={tw('flex-1 font-medium text-16 text-#5669FF')}
+            style={tw('flex-1 font-medium text-16 text-#747688')}
             numberOfLines={1}>
             {title}
           </Text>

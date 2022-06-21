@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  StyleSheet,
   Text,
   TouchableOpacity,
   TouchableOpacityProps,
@@ -31,6 +32,7 @@ const ButtonCommon = ({
           `w-full min-w-200 justify-center items-center bg-${backgroundColor} py-18 rounded-15`,
         ),
         style,
+        styles.shadow,
       ]}>
       {typeof title === 'string' ? (
         <Text style={tw('text-16 font-normal text-#FFFFFF')}>{title}</Text>
@@ -47,3 +49,17 @@ const ButtonCommon = ({
 };
 
 export default React.memo(ButtonCommon);
+
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+
+    elevation: 6,
+  },
+});

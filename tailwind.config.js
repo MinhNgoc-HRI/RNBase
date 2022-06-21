@@ -16,11 +16,14 @@ module.exports = {
         '##37364A': '#37364A',
         backdrop: 'rgba(0,0,0,0.5)',
       },
-      spacing: (() => {
-        return Array.from(Array(600).keys()).map((e, index) => {
-          return `${index + 1}px`;
-        });
-      })(),
+      spacing: {
+        '70/': '70%',
+        ...(() => {
+          return Array.from(Array(600).keys()).map((e, index) => {
+            return `${index + 1}px`;
+          });
+        })(),
+      },
       borderRadius: (() => {
         return Array.from(Array(9999).keys()).map((e, index) => {
           return `${index + 1}px`;
@@ -39,6 +42,11 @@ module.exports = {
       minWidth: (() => {
         return Array.from(Array(1000).keys()).map((e, index) => {
           return `${index + 1}px`;
+        });
+      })(),
+      borderWidth: (() => {
+        return Array.from(Array(1000).keys()).map((e, index) => {
+          return `${(index + 1) / 10}px`;
         });
       })(),
       translate: {
