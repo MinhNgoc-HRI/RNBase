@@ -23,8 +23,15 @@ export type HomeStackParamlist = {
   Item: { name: string } | undefined;
   Card: undefined;
 };
-export type MainStackParamlist = {
+export type DrawerStackParamlist = {
   HomeScreen: undefined;
+  HomeScreen2: undefined;
+  HomeScreen3: undefined;
+  HomeScreen4: undefined;
+  HomeScreen5: undefined;
+};
+export type MainStackParamlist = {
+  HomeDrawerStack: NavigatorScreenParams<DrawerStackParamlist>;
 };
 export type AuthStackParamList = {
   SigninScreen: undefined;

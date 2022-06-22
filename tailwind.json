@@ -44,9 +44,9 @@
 			"left": 29
 		}
 	},
-	"top-0": {
+	"top-179": {
 		"style": {
-			"top": 1
+			"top": 180
 		}
 	},
 	"m-30": {
@@ -98,6 +98,26 @@
 			"marginRight": 21
 		}
 	},
+	"ml-25": {
+		"style": {
+			"marginLeft": 26
+		}
+	},
+	"mt-15": {
+		"style": {
+			"marginTop": 16
+		}
+	},
+	"mt-38": {
+		"style": {
+			"marginTop": 39
+		}
+	},
+	"ml-5": {
+		"style": {
+			"marginLeft": 6
+		}
+	},
 	"mt-17": {
 		"style": {
 			"marginTop": 18
@@ -116,11 +136,6 @@
 	"mb-30": {
 		"style": {
 			"marginBottom": 31
-		}
-	},
-	"mt-15": {
-		"style": {
-			"marginTop": 16
 		}
 	},
 	"ml-20": {
@@ -158,19 +173,9 @@
 			"marginTop": 26
 		}
 	},
-	"ml-25": {
+	"mr-5": {
 		"style": {
-			"marginLeft": 26
-		}
-	},
-	"mt-38": {
-		"style": {
-			"marginTop": 39
-		}
-	},
-	"ml-5": {
-		"style": {
-			"marginLeft": 6
+			"marginRight": 6
 		}
 	},
 	"flex": {
@@ -193,14 +198,24 @@
 			"height": 101
 		}
 	},
-	"h-[8]": {
+	"h-55": {
 		"style": {
-			"height": 8
+			"height": 56
+		}
+	},
+	"h-180": {
+		"style": {
+			"height": 181
 		}
 	},
 	"h-full": {
 		"style": {
 			"height": "100%"
+		}
+	},
+	"h-[8]": {
+		"style": {
+			"height": 8
 		}
 	},
 	"h-20": {
@@ -221,6 +236,11 @@
 	"w-24": {
 		"style": {
 			"width": 25
+		}
+	},
+	"w-55": {
+		"style": {
+			"width": 56
 		}
 	},
 	"w-70/": {
@@ -290,6 +310,11 @@
 			"alignSelf": "flex-end"
 		}
 	},
+	"overflow-hidden": {
+		"style": {
+			"overflow": "hidden"
+		}
+	},
 	"rounded-15": {
 		"style": {
 			"borderTopLeftRadius": 16,
@@ -343,9 +368,27 @@
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
 		}
 	},
+	"bg-#3D56F0": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(61 86 240 / var(--tw-bg-opacity))"
+		}
+	},
+	"bg-#4A43EC": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(74 67 236 / var(--tw-bg-opacity))"
+		}
+	},
 	"bg-transparent": {
 		"style": {
 			"backgroundColor": "transparent"
+		}
+	},
+	"bg-#000000": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(0 0 0 / var(--tw-bg-opacity))"
 		}
 	},
 	"bg-#5669FF": {
@@ -359,18 +402,20 @@
 			"backgroundColor": "#FFFFFF80"
 		}
 	},
-	"bg-#3D56F0": {
-		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(61 86 240 / var(--tw-bg-opacity))"
-		}
-	},
 	"p-16": {
 		"style": {
 			"paddingTop": 17,
 			"paddingRight": 17,
 			"paddingBottom": 17,
 			"paddingLeft": 17
+		}
+	},
+	"p-10": {
+		"style": {
+			"paddingTop": 11,
+			"paddingRight": 11,
+			"paddingBottom": 11,
+			"paddingLeft": 11
 		}
 	},
 	"py-18": {
@@ -401,6 +446,12 @@
 		"style": {
 			"paddingTop": 17,
 			"paddingBottom": 17
+		}
+	},
+	"px-10": {
+		"style": {
+			"paddingLeft": 11,
+			"paddingRight": 11
 		}
 	},
 	"px-40": {
@@ -449,6 +500,16 @@
 			"fontSize": 19
 		}
 	},
+	"text-12": {
+		"style": {
+			"fontSize": 13
+		}
+	},
+	"text-19": {
+		"style": {
+			"fontSize": 20
+		}
+	},
 	"text-22": {
 		"style": {
 			"fontSize": 23
@@ -469,9 +530,14 @@
 			"fontSize": 36
 		}
 	},
-	"text-19": {
+	"text-13": {
 		"style": {
-			"fontSize": 20
+			"fontSize": 14
+		}
+	},
+	"text-1": {
+		"style": {
+			"fontSize": 2
 		}
 	},
 	"font-normal": {
@@ -512,16 +578,22 @@
 			"color": "rgb(18 13 38 / var(--tw-text-opacity))"
 		}
 	},
-	"text-##37364A": {
-		"style": {
-			"--tw-text-opacity": 1,
-			"color": "rgb(55 54 74 / var(--tw-text-opacity))"
-		}
-	},
 	"text-#9D9898": {
 		"style": {
 			"--tw-text-opacity": 1,
 			"color": "rgb(157 152 152 / var(--tw-text-opacity))"
+		}
+	},
+	"text-#000000": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(0 0 0 / var(--tw-text-opacity))"
+		}
+	},
+	"text-##37364A": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(55 54 74 / var(--tw-text-opacity))"
 		}
 	},
 	"text-#3D56F0": {
@@ -530,10 +602,10 @@
 			"color": "rgb(61 86 240 / var(--tw-text-opacity))"
 		}
 	},
-	"text-#000000": {
+	"text-#FAFAFA": {
 		"style": {
 			"--tw-text-opacity": 1,
-			"color": "rgb(0 0 0 / var(--tw-text-opacity))"
+			"color": "rgb(250 250 250 / var(--tw-text-opacity))"
 		}
 	},
 	"opacity-50": {

@@ -29,15 +29,21 @@ type ButtonSocialProps = {
   icon: React.FC<SvgProps>;
   title: string;
 };
-export const ButtonSocial = ({ icon: Icon, title }: ButtonSocialProps) => {
-  const tw = useTailwind();
-  return (
-    <View style={tw('flex-row justify-between items-center')}>
-      <Icon />
-      <Text style={tw('text-16 text-#120D26 ml-20')}>{title}</Text>
-    </View>
-  );
-};
+export const ButtonSocial = React.memo(
+  ({ icon: Icon, title }: ButtonSocialProps) => {
+    const tw = useTailwind();
+    return (
+      <View style={tw('flex-row justify-between items-center')}>
+        <Icon />
+        <Text style={tw('text-16 text-#120D26 ml-20')}>{title}</Text>
+      </View>
+    );
+  },
+);
+const GmailButton = (
+  <ButtonSocial icon={IconGmail} title={'Login with Gmail'} />
+);
+const FbButton = <ButtonSocial icon={IconFb} title={'Login with Facebook'} />;
 type Props = CompositeScreenProps<
   NativeStackScreenProps<AuthStackParamList, 'SigninScreen'>,
   NativeStackScreenProps<RootStackParamList>
@@ -48,6 +54,14 @@ const SigninScreen = ({ navigation, route }: Props) => {
   const switchHandle = useCallback((event: SwitchChangeEvent) => {
     setS(state => !state);
   }, []);
+  const SignInHandle = useCallback(() => {
+    navigation.navigate('MainScreen', {
+      screen: 'HomeDrawerStack',
+      params: {
+        screen: 'HomeScreen',
+      },
+    });
+  }, [navigation]);
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -107,31 +121,17 @@ const SigninScreen = ({ navigation, route }: Props) => {
               <ButtonCommon
                 title={'SIGN IN'}
                 icon={IconArrow}
-                onPress={() =>
-                  navigation.navigate('MainScreen', {
-                    screen: 'HomeScreen',
-                  })
-                }
+                onPress={SignInHandle}
               />
             </View>
             <View
               style={tw('mx-20 mt-24 flex-col items-center justify-center')}>
               <Text style={tw('text-16 text-#9D9898 font-medium')}>OR</Text>
               <View style={tw('w-full mt-17')}>
-                <ButtonCommon
-                  title={
-                    <ButtonSocial icon={IconGmail} title={'Login with Gmail'} />
-                  }
-                  backgroundColor={'#FFFFFF'}
-                />
+                <ButtonCommon title={GmailButton} backgroundColor={'#FFFFFF'} />
               </View>
               <View style={tw('w-full mt-17')}>
-                <ButtonCommon
-                  title={
-                    <ButtonSocial icon={IconFb} title={'Login with Facebook'} />
-                  }
-                  backgroundColor={'#FFFFFF'}
-                />
+                <ButtonCommon title={FbButton} backgroundColor={'#FFFFFF'} />
               </View>
               <View style={tw('flex-row mt-15')}>
                 <Text style={tw('text-15 text-#120D26')}>

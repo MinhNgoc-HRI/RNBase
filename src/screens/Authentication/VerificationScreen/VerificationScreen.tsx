@@ -45,6 +45,12 @@ const VerificationScreen = ({ navigation }: Props) => {
                 <TouchableOpacity
                   onPress={() => {
                     // do somethings;
+                    navigation.navigate('MainScreen', {
+                      screen: 'HomeDrawerStack',
+                      params: {
+                        screen: 'HomeScreen',
+                      },
+                    });
                   }}>
                   <Text style={tw('text-15 text-#3D56F0')}>0:20</Text>
                 </TouchableOpacity>
